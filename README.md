@@ -199,5 +199,5 @@ Rscript sexing.R
 
 Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", containing the different plots.
 
-![image](https://github.com/Dieggarp/Sexing/assets/88154471/d2a87809-3933-4c8a-ae38-dcbe92db2f90)
+![image](https://github.com/Dieggarp/Sexing/assets/88154471/f155c3fb-9443-43c1-bab5-b7ec9d5603fe)[width="250" height="200"]
 
