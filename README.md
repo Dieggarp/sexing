@@ -4,6 +4,7 @@
 2023-06-14
 
 
+
 ### Abstract
 
 Assigning sex to individuals without previous information is a common objective of molecular ecology. Here, we developed a framework for sexing animals by using two indexes based on the different properties of the mammalian sexual chromosomes. We mapped RAD-seq loci to a reference genome to obtain missingness and coverage depth from chromosomes Y, X and autosomal, which allowed identifying the sex of fur seals from a previous study with previous sex information. Moreover, we sexed 38 sea lions sampled non-invasively, allowing us to discuss our indexes’ reliability at different coverage depths. We believe this approach could extrapolate to any mammal species or taxa with known XY sex chromosome systems and different qualities of the GBS sequencing.
@@ -156,11 +157,11 @@ After saving, make a directory to deposit the new files (we call it "sexing") an
 cd sexing
 
 cat ../chromosome.list.txt | while read line;
-  do
-    vcftools --chr $line --vcf ../populations.snps.vcf --depth --out ${line}
+ do
+  vcftools --chr $line --vcf ../populations.snps.vcf --depth --out ${line}
 
-    vcftools --chr $line --vcf ../populations.snps.vcf --missing-indv --out ${line}
-  done
+  vcftools --chr $line --vcf ../populations.snps.vcf --missing-indv --out ${line}
+ done
 
 rename 's/$/.tsv/' *.i*
 ```
@@ -168,26 +169,27 @@ rename 's/$/.tsv/' *.i*
 Simplify the tables leaving only the first and last columns (sample names and data of interest).
 ```{bash,eval=FALSE}
 for file in *.tsv;
-  do awk '{print $1, $NF }' $file > ${file/.tsv/_2_.tsv};
-done
+ do
+  awk '{print $1, $NF }' $file > ${file/.tsv/_2_.tsv};
+ done
 ```
 
 And named the columns with the name of the chromosome identifiers.
 
 ```{bash,eval=FALSE}
 for f in *.imiss_2_.tsv;
-  do
-    n=${f%%.imiss_2_.tsv}
-    filename=`echo ${f:r}`; sed -i -e "s/F_MISS/F_MISS_$n/" $f;
-done
+ do
+  n=${f%%.imiss_2_.tsv}
+  filename=`echo ${f:r}`; sed -i -e "s/F_MISS/F_MISS_$n/" $f;
+ done
 ```
 
 ```{bash,eval=FALSE}
 for f in *.idepth_2_.tsv;
-  do
-    n=${f%%.idepth_2_.tsv}
-    filename=`echo ${f:r}`; sed -i -e "s/MEAN_DEPTH/M_DEPTH_$n/" $f;
-done
+ do
+  n=${f%%.idepth_2_.tsv}
+  filename=`echo ${f:r}`; sed -i -e "s/MEAN_DEPTH/M_DEPTH_$n/" $f;
+ done
 ```
 
 6.1.Run the script "sexing.R" inside the "sexing" directory to calculate Index_X and Index_Y and to reveal the sex of each individual.
