@@ -197,7 +197,21 @@ for f in *.idepth_2_.tsv;
 Rscript sexing.R
 ```
 
-Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", containing the different plots.
+Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", containing the different plots. Next, there are examples of the output files.
 
-![image,width="250" height="200"](https://github.com/Dieggarp/Sexing/assets/88154471/f155c3fb-9443-43c1-bab5-b7ec9d5603fe)
+First, an example of the table "final_sexing.csv".
+
+![image](https://github.com/Dieggarp/Sexing/assets/88154471/16198abf-b5ca-4d9c-b9c4-64d7fdec34da)
+
+And second, an example of the figures.
+
+![image](https://github.com/Dieggarp/Sexing/assets/88154471/10dcc230-ef3e-4473-a668-bc0b104438b2) ![image](https://github.com/Dieggarp/Sexing/assets/88154471/c43661ce-e984-4a3e-bf5c-9f712eb75fa9)
+
+Figure A corresponds to a dispersion plot of Index Y and X. Figure B corresponds to one of the control figures showing Index Y vs Coverage depth. In both cases, red dots include male individuals, and black dots include females.
+
+
+
+
+
+
 
