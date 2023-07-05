@@ -1,13 +1,7 @@
----
-title: "When sex scarce: A rapid approach to sexing individuals by RAD-seq using a reference genome"
-author: "Diego M. Peralta, Juan I. Túnez, Ulises E. Rodríguez Cruz, Santiago G. Ceballos"
-date: "2023-06-14"
-output: html_document
----
+# **"When sex scarce: A rapid approach to sexing individuals by RAD-seq using a reference genome"**
+**"Diego M. Peralta, Juan I. Túnez, Ulises E. Rodríguez Cruz, Santiago G. Ceballos"**
+"2023-06-14"
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ### Abstract
 
