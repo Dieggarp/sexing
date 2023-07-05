@@ -194,4 +194,4 @@ done
 Rscript sexing.R
 ```
 
-Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", the control plots.
+Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", containing the different plots.
