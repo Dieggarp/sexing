@@ -20,7 +20,7 @@ The requirements are listed according to their utilization.
 * Linux
 * BWA (0.7.17-r1188)
 * Samtools (1.3.1)
-* Stacks (2.60)
+* Stacks (2.64)
 * VCFtools (0.1.17)
 * R (4.3.0)
 
@@ -132,15 +132,15 @@ gstacks -I alignments.bwa/ -M files/popfile.tsv -t 24 -O gstacks.bwa/
 
 **SNPs Identification**
 
-5.Creates a catalog of SNPs with populations module. The SNPs filtering steps were aimed to retain as many markers associated with sex chromosomes as possible. Thus, considering that Y linked loci are present only in males, we set the minimum proportion of individuals across populations to process a locus (-R) to 0.3, which assumes a minimum of 30 % of males in our data set.
+5. Create a catalog of SNPs with populations module. The SNPs filtering steps were aimed to retain as many markers associated with sex chromosomes as possible. Thus, considering that Y linked loci are present only in males, we set the minimum proportion of individuals across populations to process a locus (-R) to 0.3, which assumes a minimum of 30 % of males in our data set. The flag --vcf-all retrieves all the positions within the RAD-loci, containing fixed and variable sites.
 ```{bash,eval=FALSE}
-populations -P gstacks.bwa --popmap files/popfile.tsv --max-obs-het 0.7 -R 0.3 -t 8 -O populations --vcf
+populations -P gstacks.bwa --popmap files/popfile.tsv --max-obs-het 0.7 -R 0.3 -t 8 -O populations --vcf-all
 ```
 
 
 **Sex identification**
 
-6.Enter to the "populations" directory and obtain files of missingness and depth of coverage of each individual for chromosomes X, Y and the autosomal. VCFtools --chr flag uses SNPs contained in a specified chromosome. Here we attempted to automate the process. First create a list of the names of chromosomes under interest. To do this, enter to the chosen species genome directory from https://www.ncbi.nlm.nih.gov/genome/ and copy the chromosome identifiers from the column "RefSeq". In our case: Y (NC_045613.1), X (NC_045612.1), and chromosome 10 (NC_045604.1). After that, paste them into a new file we call chromosome.list.txt.
+6. Enter to the "populations" directory and obtain files of missingness and depth of coverage of each individual for chromosomes X, Y and the autosomal. VCFtools --chr flag uses loci contained in a specified chromosome, while --not-chr avoids those we chose. Here, we attempted to automate the process. First, create a list of the names of sex chromosomes. To do this, enter to the chosen species genome directory from https://www.ncbi.nlm.nih.gov/genome/ and copy the chromosome identifiers from the column "RefSeq". In our case: Y (NC_045613.1) and X (NC_045612.1). After that, paste them into a new file we call chromosome.list.txt.
 ```{bash,eval=FALSE}
 nano chromosome.list.txt
 ```
@@ -149,7 +149,6 @@ Our file looks like:
 ```{bash,eval=FALSE}
 NC_045613.1
 NC_045612.1
-NC_045604.1
 ```
 
 After saving, make a directory to deposit the new files (we call it "sexing") and make the next loop to create the files of interest in one step.
@@ -158,10 +157,12 @@ cd sexing
 
 cat ../chromosome.list.txt | while read line;
  do
-  vcftools --chr $line --vcf ../populations.snps.vcf --depth --out ${line}
+  vcftools --chr $line --vcf ../populations.all.vcf --depth --out ${line}
 
-  vcftools --chr $line --vcf ../populations.snps.vcf --missing-indv --out ${line}
+  vcftools --chr $line --vcf ../populations.all.vcf --missing-indv --out ${line}
  done
+
+vcftools --not-chr NC_045613.1 --not-chr NC_045612.1 --vcf ../populations.all.vcf --depth --out autosomals
 
 rename 's/$/.tsv/' *.i*
 ```
