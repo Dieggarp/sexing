@@ -202,7 +202,7 @@ Two new files will appear when it finishes, "final_sexing.csv", containing resul
 
 First, an example of the table "final_sexing.csv".
 
-![image](https://github.com/Dieggarp/Sexing/assets/88154471/16198abf-b5ca-4d9c-b9c4-64d7fdec34da)
+![image]([https://github.com/Dieggarp/Sexing/assets/88154471/16198abf-b5ca-4d9c-b9c4-64d7fdec34da](https://mega.nz/file/wc9lGSRR#AGFJi270APds2DR2kKMAdy9pqSMFHXvSi-pZ-42Yz04))
 
 And second, an example of the figures.
 
