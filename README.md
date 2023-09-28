@@ -206,7 +206,7 @@ First, an example of the table "final_sexing.csv".
 
 And second, an example of the figures.
 
-![image](https://github.com/Dieggarp/Sexing/assets/88154471/10dcc230-ef3e-4473-a668-bc0b104438b2) ![image](https://github.com/Dieggarp/Sexing/assets/88154471/c43661ce-e984-4a3e-bf5c-9f712eb75fa9)
+![image](https://github.com/Dieggarp/sexing/blob/0e7e3dc1c820daf3d57f5cedbf192bfd5947484a/PlotArc.jpg) ![image](https://github.com/Dieggarp/sexing/blob/0e7e3dc1c820daf3d57f5cedbf192bfd5947484a/Sup%20Plot%20Arc.jpg)
 
 Figure A corresponds to a dispersion plot of Index Y and X. Figure B corresponds to one of the control figures showing Index X and Y vs Coverage depth. In both cases, red dots include male individuals, and black dots include females.
 
