@@ -202,13 +202,13 @@ Two new files will appear when it finishes, "final_sexing.csv", containing resul
 
 First, an example of the table "final_sexing.csv".
 
-![image]([https://github.com/Dieggarp/Sexing/assets/88154471/16198abf-b5ca-4d9c-b9c4-64d7fdec34da](https://mega.nz/file/wc9lGSRR#AGFJi270APds2DR2kKMAdy9pqSMFHXvSi-pZ-42Yz04))
+![image]([https://mega.nz/file/wc9lGSRR#AGFJi270APds2DR2kKMAdy9pqSMFHXvSi-pZ-42Yz04])
 
 And second, an example of the figures.
 
 ![image](https://github.com/Dieggarp/Sexing/assets/88154471/10dcc230-ef3e-4473-a668-bc0b104438b2) ![image](https://github.com/Dieggarp/Sexing/assets/88154471/c43661ce-e984-4a3e-bf5c-9f712eb75fa9)
 
-Figure A corresponds to a dispersion plot of Index Y and X. Figure B corresponds to one of the control figures showing Index Y vs Coverage depth. In both cases, red dots include male individuals, and black dots include females.
+Figure A corresponds to a dispersion plot of Index Y and X. Figure B corresponds to one of the control figures showing Index X and Y vs Coverage depth. In both cases, red dots include male individuals, and black dots include females.
 
 
 
