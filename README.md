@@ -1,7 +1,7 @@
 # **"Rapid approach to sexing individuals by RAD-seq using a reference genome"**
 **Diego M. Peralta, Juan I. Túnez, Ulises E. Rodríguez Cruz, Santiago G. Ceballos**
 
-2023-06-14
+2023-09-28
 
 
 
