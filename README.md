@@ -195,7 +195,7 @@ for f in *.idepth_2_.tsv;
 
 6.1.Run the script "sexing.R" inside the "sexing" directory to calculate Index_X and Index_Y and to reveal the sex of each individual.
 ```{bash,eval=FALSE}
-Rscript sexing.R
+Rscript Sexing.R
 ```
 
 Two new files will appear when it finishes, "final_sexing.csv", containing results and "sexing_plots.pdf", containing the different plots. Next, there are examples of the output files.
