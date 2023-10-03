@@ -1,4 +1,4 @@
-# **"Rapid approach to sexing individuals by RAD-seq using a reference genome"**
+# **"A rapid approach for sex assignment by RAD-seq using a reference genome"**
 **Diego M. Peralta, Juan I. Túnez, Ulises E. Rodríguez Cruz, Santiago G. Ceballos**
 
 2023-09-28
@@ -7,7 +7,7 @@
 
 ### Abstract
 
-Assigning sex to individuals without previous information is a common objective of molecular ecology. Here, we developed a framework for sexing animals by using two indexes based on the different properties of the mammalian sexual chromosomes. We mapped RAD-seq loci to a reference genome to obtain missingness and coverage depth from chromosomes Y, X and autosomal, which allowed identifying the sex of fur seals from a previous study with previous sex information. Moreover, we sexed 38 sea lions sampled non-invasively, allowing us to discuss our indexes’ reliability at different coverage depths. We believe this approach could extrapolate to any mammal species or taxa with known XY sex chromosome systems and different qualities of the GBS sequencing.
+Sex identification is a common objective in molecular ecology. While many vertebrates display sexual dimorphism, determining the sex can be challenging in certain situations, such as species lacking clear sex-related phenotypic characteristics or in studies using non-invasive methods. In these cases, DNA analyses serve as valuable tools not only for sex determination but also for validating sex assignment based on phenotypic traits. In this study, we developed a bioinformatic framework for sex assignment using genomic data obtained through GBS, and having an available closely related genome assembled at the chromosome level. Our method consists of two ad hoc indexes that rely on the different properties of the mammalian heteromorphic sex chromosomes. For this purpose, we mapped RAD-seq loci to a reference genome and then obtained missingness and coverage depth values for the autosomes and X and Y chromosomes of each individual. Our methodology successfully determined the sex of 165 fur seals that had been phenotypically sexed in a previous study and 40 sea lions sampled in a non-invasive way. Additionally, we evaluated the accuracy of each index in sequences with varying average coverage depths, with Index Y proving greater reliability and robustness in assigning sex to individuals with low-depth coverage. We believe that the approach presented here can be extended to any animal taxa with known heteromorphic XY/ZW sex chromosome systems and that it can tolerate various qualities of GBS sequencing data.
 
 ### Objective
 
